@@ -1,0 +1,101 @@
+.window{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 97vw;
+    height: 97vh;
+
+    border-color: solid red;
+    border-width: 1rem;
+    border-radius: 0.5rem;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 0.2rem;
+
+    padding: 10px;
+
+    background-color: blueviolet;
+
+    border-style: groove;
+    border-color: lime;
+    border-width: 0.75rem;
+    border-radius: 0.5rem;
+
+    width: 950px;
+    
+    max-width: 90vw;
+    max-height: auto;
+}
+
+.card-container > .memory-card{
+    
+    display: inline-block;
+
+    transition: all 1s ease-in-out;
+
+    width: 150px;
+    height: 225px;
+
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: rgba(0,0,0,0);
+    border-width: 5px;
+    border-radius: 0.8rem;
+    /*
+    background-image: url(/memory/assets/images/fox.jpg);
+    */
+    background-repeat: no-repeat;
+    background-size: 150px 225px;
+    
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+
+    z-index: 0;
+}
+
+.card-container > .memory-card  img{
+    transition: 0.5s;
+    width: 150px;
+    height: 225px;
+    margin: -5px -10px;
+    border-radius: inherit;
+    position: relative;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    transform: translate(-0%,-97%);
+    z-index: 2;
+}
+
+#winScreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10vh;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+p{
+    color: white;
+}
